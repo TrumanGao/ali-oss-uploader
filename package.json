@@ -5,9 +5,11 @@
   "main": "dist/ali-oss-uploader.cjs.js",
   "module": "dist/ali-oss-uploader.es.js",
   "scripts": {
-    "build": "npm run clean && rollup --config",
+    "build": "npm run clean && npm run version:minor && rollup --config",
     "clean": "rimraf dist",
-    "uninstall": "rimraf node_modules"
+    "uninstall": "rimraf node_modules",
+    "version:minor": "npm version minor",
+    "version:major": "npm version major"
   },
   "keywords": [
     "ali-oss"
