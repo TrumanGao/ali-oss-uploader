@@ -1,6 +1,6 @@
 {
   "name": "@trumangao/ali-oss-uploader",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "main": "dist/ali-oss-uploader.cjs.js",
   "module": "dist/ali-oss-uploader.es.js",
