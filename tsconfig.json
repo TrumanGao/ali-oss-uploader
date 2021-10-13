@@ -1,8 +1,0 @@
-{
-  "files": ["src/index.ts"],
-  "compilerOptions": {
-    "allowJs": true,
-    "noImplicitAny": true,
-    "target": "es5"
-  }
-}

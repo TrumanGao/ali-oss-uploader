@@ -6,6 +6,8 @@
  * @param {string} bucket - required
  * @param {function} getSts - required
  */
+import OSS from "ali-oss";
+
 // * @param {string} path
 export class OssUpload {
   constructor(
@@ -62,7 +64,6 @@ export class OssUpload {
         accessKeySecret
       };
 
-      const { default: OSS } = await import("ali-oss");
       this.ossClient = new OSS(this.ossClientConfig);
 
       return Promise.resolve(this.ossClient);
