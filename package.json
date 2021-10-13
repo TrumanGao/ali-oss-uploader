@@ -7,10 +7,7 @@
   "scripts": {
     "build": "npm run clean && rollup --config",
     "clean": "rimraf dist",
-    "uninstall": "rimraf node_modules",
-    "version": "npm version patch",
-    "version:minor": "npm version minor",
-    "version:major": "npm version major"
+    "uninstall": "rimraf node_modules"
   },
   "keywords": [
     "ali-oss"
