@@ -1,13 +1,15 @@
+import pkg from './package.json';
+
 export default {
     input: "./src/index.js",
     output: [
         {
             format: "cjs",
-            file: "lib/bundle.cjs.js"
+            file: "dist/ali-oss-uploader.cjs.js"
         },
         {
             format: "es",
-            file: "lib/bundle.esm.js"
+            file: "dist/ali-oss-uploader.es.js"
         }
     ],
 };

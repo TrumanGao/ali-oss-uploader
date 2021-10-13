@@ -2,10 +2,11 @@
   "name": "@trumangao/ali-oss-uploader",
   "version": "1.0.2",
   "description": "",
-  "main": "src/index.js",
+  "main": "dist/ali-oss-uploader.cjs.js",
+  "module": "dist/ali-oss-uploader.es.js",
   "scripts": {
     "build": "npm run clean && rollup --config",
-    "clean": "rimraf lib",
+    "clean": "rimraf dist",
     "uninstall": "rimraf node_modules"
   },
   "keywords": [

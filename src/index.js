@@ -16,7 +16,7 @@ export class OssUpload {
      */
     config = {}
   ) {
-    console.log("自定义配置参数", config);
+    console.log("js库：自定义配置参数", config);
     // 全部属性挂载到实例对象上
     Object.entries(config).map(cItem => {
       const key = cItem[0];
@@ -48,7 +48,7 @@ export class OssUpload {
    * @returns {Promise} ossClient 实例对象
    */
   async initOssClient() {
-    console.log("开始执行 oss 初始化");
+    console.log("js库：开始执行 oss 初始化");
     try {
       const { stsToken, accessKeyId, accessKeySecret } = await this.getSts();
 
@@ -105,15 +105,15 @@ OssUpload.prototype.multipartUpload = async function (path, file, opt = {}) {
   if (!file) {
     return Promise.reject(new Error("文件不存在"));
   }
-  console.log("分片上传");
+  console.log("js库：分片上传");
 
   const multipartUploadOptions = {
     parallel: this.parallel, // the number of parts to be uploaded in parallel
     partSize: this.partSize, // the suggested size for each part
     // progress(uploadProgress, uploadCheckpoint, uploadStatus) {
-    //   console.log("上传进度", uploadProgress);
-    //   console.log("上传文件", JSON.parse(JSON.stringify(uploadCheckpoint)));
-    //   console.log("上传状态", uploadStatus);
+    //   console.log("js库：上传进度", uploadProgress);
+    //   console.log("js库：上传文件", JSON.parse(JSON.stringify(uploadCheckpoint)));
+    //   console.log("js库：上传状态", uploadStatus);
 
     //   this.tempUploadFile = uploadCheckpoint;
     // }, // the progress callback called after each successful upload of one part
@@ -121,7 +121,7 @@ OssUpload.prototype.multipartUpload = async function (path, file, opt = {}) {
     // meta: "",
     // mime: "",
     // callback() {
-    //   console.log("multipartUpload 函数 callback 回调参数", arguments);
+    //   console.log("js库：multipartUpload 函数 callback 回调参数", arguments);
     // }
     // headers: "",
     // timeout: "",
@@ -161,9 +161,9 @@ OssUpload.prototype.resumeUpload = async function (path, file, opt = {}) {
 
   const resumeUpload = await this.multipartUpload(path, file, {
     // progress(uploadProgress, uploadCheckpoint, uploadStatus) {
-    //   console.log("重新上传进度", uploadProgress);
-    //   console.log("重新上传文件", JSON.parse(JSON.stringify(uploadCheckpoint)));
-    //   console.log("重新上传状态", uploadStatus);
+    //   console.log("js库：重新上传进度", uploadProgress);
+    //   console.log("js库：重新上传文件", JSON.parse(JSON.stringify(uploadCheckpoint)));
+    //   console.log("js库：重新上传状态", uploadStatus);
 
     //   this.tempUploadFile = uploadCheckpoint;
     // },
